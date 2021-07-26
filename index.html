@@ -1,16 +1,59 @@
+<!DOCTYPE html>
 <html>
     <head>
-    <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
+    <title> Web App – Simple Interest Calculator </title>
     </head>
     <body>
+        <div class="formPrincipal">
         <h1>Simple Interest Calculator</h1>
-
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
-
-        <button onclick="compute()">Compute</button>
+        
+        <div class="form_elements">
+        <form id="form1"  method="POST">
+        
+        <div class="div_amount">
+            <label for="l_amount">Amount</label>
+            <input type="number"  id="principal" name="principal" requiered>  <br/>
+        </div>
+        <div class="div_rate">
+            <label for="l_rate">Rate</label>
+            <div class="div_slider">
+                <input type="range"  id="rate" name="rate" value="10" step="0.1" min="1" max="20" requiered><p id="rate_selected"></p><br/>
+            </div>
+        </div>
+        <div class="dropdown_years">
+            <label for="l_NoOfYears">No. of Years</label>
+            <select name="NoOfYears" id="NoOfYears">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select><br>
+        </div>
+        
+        <div class="div_button">
+            <button type="button" onclick="return compute()">Compute Interest</button>
+        </div>
+        </form>
+        </div>
+        
+        <div class="finalResult" id="results" hidden>
+            <div class="line"><p>If you deposit &nbsp</p><span id="amount_input"></span><p>,</p></div>
+            <div class="line"><p>at an interest rate of &nbsp</p><span id="rate_input"></span><p>.</p></div>
+            <div class="line"><p>You will receive an amount of &nbsp</p><span id="amount_result"></span><p>,</p></div>
+            <div class="line"><p>in the year &nbsp</p><span id="year_result"></span><br></div>
+        </div>
+        <footer>
+            <p>Ⓒ Everyone Can Get Rich<br>
+        </footer>
+        </div>
+    
+    <script src="script.js"></script>    
     </body>
 </html>

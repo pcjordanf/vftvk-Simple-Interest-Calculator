@@ -1,4 +1,55 @@
-body {background-color:tan;}
-h1{color:green;}
-
-
+body {background-color:black;}
+h1{color:dimgray;
+text-align: center;}
+.formPrincipal {
+    background-color:whitesmoke;
+    display: flow-root;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+    font-family: system-ui;
+}
+.form_elements{
+    margin-inline-start: 25%;
+    display: block;
+}
+label{
+  display: inline-block;
+  width: 120px;
+  margin: 8px;
+}
+button{
+    display: inline-block;
+    width: 120px;
+    margin: 8px;
+}
+input{
+    margin: 8px;
+}
+select{
+    margin: 8px;
+}
+span{
+    background-color: #FFFF00;
+}
+.finalResult{
+    margin-inline-start: 25%;
+}
+.line{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+p{
+    margin: 5px;
+}
+.div_slider{
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.div_rate{
+ display: flow-root;
+}
